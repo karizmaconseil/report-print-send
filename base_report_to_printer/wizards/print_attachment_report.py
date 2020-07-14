@@ -9,9 +9,13 @@ class PrintAttachment(models.TransientModel):
     _name = 'wizard.print.attachment'
     _description = 'Print Attachment'
 
-    printer_id = fields.Many2one('printing.printer', string='Printer', required=True,
+    printer_id = fields.Many2one('printing.printer',
+                                 string='Printer',
+                                 required=True,
                                  help='Printer used to print the attachments.')
-    attachment_line_ids = fields.One2many('wizard.print.attachment.line', 'wizard_id', string='Attachments to print', )
+    attachment_line_ids = fields.One2many('wizard.print.attachment.line',
+                                          'wizard_id',
+                                          string='Attachments to print',)
 
     @api.multi
     def print_attachments(self):
@@ -52,8 +56,11 @@ class PrintAttachmentLine(models.TransientModel):
     wizard_id = fields.Many2one("wizard.print.attachment")
     attachment_id = fields.Many2one('ir.attachment',
                                     required=True,
-                                    domain="['|', ('mimetype', '=', 'application/pdf'), "
-                                           "('mimetype', '=', 'application/octet-stream')]")
+                                    domain="['|', "
+                                           "('mimetype', "
+                                           "'=', 'application/pdf'), "
+                                           "('mimetype', "
+                                           "'=', 'application/octet-stream')]")
     record_name = fields.Char(related="attachment_id.res_name", readonly=True)
     copies = fields.Integer(default=1)
 

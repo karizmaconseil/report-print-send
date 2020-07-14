@@ -50,10 +50,10 @@ class PrintAttachmentLine(models.TransientModel):
     _description = 'Print Attachment line'
 
     wizard_id = fields.Many2one("wizard.print.attachment")
-    attachment_id = fields.Many2one( 'ir.attachment',
-                                     required=True,
-                                     domain="['|', ('mimetype', '=', 'application/pdf'), "
-                                            "('mimetype', '=', 'application/octet-stream')]")
+    attachment_id = fields.Many2one('ir.attachment',
+                                    required=True,
+                                    domain="['|', ('mimetype', '=', 'application/pdf'), "
+                                           "('mimetype', '=', 'application/octet-stream')]")
     record_name = fields.Char(related="attachment_id.res_name", readonly=True)
     copies = fields.Integer(default=1)
 

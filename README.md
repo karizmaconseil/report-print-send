@@ -1,7 +1,4 @@
-![Licence](https://img.shields.io/badge/licence-AGPL--3-blue.svg)
-[![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat/144/12.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-report-print-send-144)
-[![Build Status](https://travis-ci.org/OCA/report-print-send.svg?branch=12.0)](https://travis-ci.org/OCA/report-print-send)
-[![Coverage Status](https://coveralls.io/repos/github/OCA/report-print-send/badge.svg?branch=12.0)](https://coveralls.io/github/OCA/report-print-send?branch=12.0)
+[![Build Status](https://travis-ci.org/karizmaconseil/report-print-send.svg?branch=12.0)](https://travis-ci.org/github/karizmaconseil/report-print-send)
 
 Report - Printing and Sending
 =============================
